@@ -2,7 +2,7 @@ package ch04;
 
 import java.util.Scanner;
 
-public class Ex06_Alarm {
+public class Ex03_Alarm {
 
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
@@ -13,6 +13,7 @@ public class Ex06_Alarm {
 		int minute = Integer.parseInt(scan.nextLine());
 		scan.close();
 		
+		
 		if (minute>=45)
 			System.out.println(hour + "시 " + (minute - 45) +"분");
 		else
@@ -21,6 +22,10 @@ public class Ex06_Alarm {
 			else
 				System.out.println((hour - 1) + "시 " + (minute + 15) + "분");
 			
+//		int hour, minute
+//		hour = scan.nextInt();
+//		minute = scan.nextInt();
+		
 	}
 
 }
