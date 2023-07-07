@@ -78,4 +78,18 @@ SELECT r.name, r.debut, l.title FROM song AS l
 	ORDER BY r.debut
 	LIMIT 5;
 	
-ㄴ
+# 연습문제
+SELECT r.Continent, r.Name, l.Name, l.Population FROM city AS l
+	JOIN country AS r
+	ON l.CountryCode = r.Code
+	WHERE r.Continent = 'Asia'
+	ORDER BY l.Population desc
+	LIMIT 10;
+	
+# 전세계 인구가 가장 많은 10개 도시에서 사용하는 공식언어
+SELECT l.Name, l.Population, r.`Language` FROM city AS l
+	JOIN countrylanguage AS r
+	ON l.CountryCode = r.CountryCode
+	WHERE r.IsOfficial = 'T'
+	ORDER BY l.Population desc
+	LIMIT 10;
